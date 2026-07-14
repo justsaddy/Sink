@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "saddytech-sink",
+  "name": "shorturl",
   "main": ".output/server/index.mjs",
   "assets": {
     "binding": "ASSETS",
@@ -28,24 +28,49 @@
   "analytics_engine_datasets": [
     {
       "binding": "ANALYTICS",
-      "dataset": "saddytech_sink"
+      "dataset": "shorturl"
     }
   ],
   "kv_namespaces": [
     {
       "binding": "KV",
-      "preview_id": "ef93d42dc4b34969bab404d2e80f8dd3",
-      "id": "ef93d42dc4b34969bab404d2e80f8dd3" // IMPORTANT: Change this to your KV namespace ID
+      "preview_id": "0baf2340573e46598a43b783e0c103c3",
+      "id": "c906784d2c0840c9aab050447253778e"
     }
   ],
   "r2_buckets": [
     {
       "binding": "R2",
-      "preview_bucket_name": "saddytech-sink",
-      "bucket_name": "saddytech-sink" // IMPORTANT: Change this to your R2 bucket name, or create one with `wrangler r2 bucket create saddytech-sink`
+      "preview_bucket_name": "shorturl-backup",
+      "bucket_name": "shorturl-backup"
     }
   ],
   "triggers": {
     "crons": ["0 0 * * *"] // Run backup task daily at 00:00 UTC
+  },
+  "env": {
+    "dev": {
+      "name": "shorturl-dev",
+      "kv_namespaces": [
+        {
+          "binding": "KV",
+          "preview_id": "0baf2340573e46598a43b783e0c103c3",
+          "id": "0baf2340573e46598a43b783e0c103c3"
+        }
+      ],
+      "r2_buckets": [
+        {
+          "binding": "R2",
+          "preview_bucket_name": "shorturl-backup",
+          "bucket_name": "shorturl-backup"
+        }
+      ],
+      "analytics_engine_datasets": [
+        {
+          "binding": "ANALYTICS",
+          "dataset": "shorturl_dev"
+        }
+      ]
+    }
   }
 }
