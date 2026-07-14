@@ -1,6 +1,6 @@
 export default defineAppConfig({
   title: 'SaddyTech',
-  github: 'https://github.com/justsaddy/Sink',
+  github: '',
   coffee: '',
   twitter: '',
   telegram: 'https://telegram.me/saddytech',

@@ -68,7 +68,7 @@
       "analytics_engine_datasets": [
         {
           "binding": "ANALYTICS",
-          "dataset": "shorturl_dev"
+          "dataset": "shorturl-dev"
         }
       ]
     }

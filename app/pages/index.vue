@@ -3,6 +3,5 @@
     <HomeHero />
     <HomeLogos />
     <HomeFeatures />
-    <HomeCta />
   </div>
 </template>
