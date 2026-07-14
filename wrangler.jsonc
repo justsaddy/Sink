@@ -47,30 +47,5 @@
   ],
   "triggers": {
     "crons": ["0 0 * * *"] // Run backup task daily at 00:00 UTC
-  },
-  "env": {
-    "dev": {
-      "name": "shorturl-dev",
-      "kv_namespaces": [
-        {
-          "binding": "KV",
-          "preview_id": "0baf2340573e46598a43b783e0c103c3",
-          "id": "0baf2340573e46598a43b783e0c103c3"
-        }
-      ],
-      "r2_buckets": [
-        {
-          "binding": "R2",
-          "preview_bucket_name": "shorturl-backup",
-          "bucket_name": "shorturl-backup"
-        }
-      ],
-      "analytics_engine_datasets": [
-        {
-          "binding": "ANALYTICS",
-          "dataset": "shorturl-dev"
-        }
-      ]
-    }
   }
 }
