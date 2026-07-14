@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import NumberFlow from '@number-flow/vue'
-import { Menu, Star, X } from 'lucide-vue-next'
-import { GitHubIcon, TelegramIcon, XIcon } from 'vue3-simple-icons'
+import { Menu, X } from 'lucide-vue-next'
+import { GitHubIcon, InstagramIcon, TelegramIcon, TikTokIcon, TwitchIcon, XIcon, YouTubeIcon } from 'vue3-simple-icons'
 
 const showMenu = ref(false)
-const { title, telegram, twitter, github } = useAppConfig()
-const { rawStats } = useGithubStats()
+const { title, telegram, twitter, github, youtube, instagram, tiktok, twitch } = useAppConfig()
 </script>
 
 <template>
@@ -94,6 +92,7 @@ const { rawStats } = useGithubStats()
                 "
               >
                 <Button
+                  v-if="github"
                   as-child
                   variant="outline"
                   size="sm"
@@ -105,8 +104,6 @@ const { rawStats } = useGithubStats()
                     class="flex items-center gap-1.5"
                   >
                     <GitHubIcon class="size-4" />
-                    <Star class="size-3" />
-                    <NumberFlow class="tabular-nums" :value="rawStats.stars" />
                   </a>
                 </Button>
 
@@ -160,15 +157,7 @@ const { rawStats } = useGithubStats()
             </NuxtLink>
 
             <small class="block text-center text-sm text-muted-foreground">
-              &copy; {{ new Date().getFullYear() }}
-              <a
-                href="https://html.zone"
-                target="_blank"
-                title="HTML.ZONE"
-                class="hover:text-primary"
-              >
-                {{ $t('layouts.footer.copyright') }}
-              </a>
+              &copy; {{ new Date().getFullYear() }} {{ title }}
             </small>
           </div>
 
@@ -214,6 +203,62 @@ const { rawStats } = useGithubStats()
               "
             >
               <GitHubIcon class="size-6" />
+            </a>
+            <a
+              v-if="youtube"
+              :href="youtube"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="YouTube"
+              aria-label="YouTube"
+              class="
+                block text-muted-foreground
+                hover:text-primary
+              "
+            >
+              <YouTubeIcon class="size-6" />
+            </a>
+            <a
+              v-if="instagram"
+              :href="instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Instagram"
+              aria-label="Instagram"
+              class="
+                block text-muted-foreground
+                hover:text-primary
+              "
+            >
+              <InstagramIcon class="size-6" />
+            </a>
+            <a
+              v-if="tiktok"
+              :href="tiktok"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="TikTok"
+              aria-label="TikTok"
+              class="
+                block text-muted-foreground
+                hover:text-primary
+              "
+            >
+              <TikTokIcon class="size-6" />
+            </a>
+            <a
+              v-if="twitch"
+              :href="twitch"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Twitch"
+              aria-label="Twitch"
+              class="
+                block text-muted-foreground
+                hover:text-primary
+              "
+            >
+              <TwitchIcon class="size-6" />
             </a>
           </div>
         </div>

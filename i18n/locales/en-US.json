@@ -136,14 +136,14 @@
       "follow": "Follow on X(Twitter)"
     },
     "stats": {
-      "title": "Sink in Numbers",
+      "title": "SaddyTech in Numbers",
       "subtitle": "Trusted by developers around the world",
       "stars": "Stars on GitHub",
       "forks": "Forks"
     },
     "testimonials": {
       "title": "Loved by Users",
-      "subtitle": "See what developers are saying about Sink"
+      "subtitle": "See what developers are saying about SaddyTech"
     }
   },
   "dashboard": {
@@ -410,7 +410,7 @@
       },
       "errors": {
         "invalid_json": "Invalid JSON file",
-        "invalid_format": "Invalid file format. Please use a file exported from Sink.",
+        "invalid_format": "Invalid file format. Please use a file exported from this app.",
         "no_links": "No links found in file",
         "parse_error": "Failed to parse file"
       }

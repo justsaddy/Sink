@@ -24,8 +24,8 @@ export default eventHandler((event) => {
   const { cfAccessTeamDomain, cfAccessAud } = useRuntimeConfig(event)
 
   return {
-    name: 'Sink',
-    url: 'https://sink.cool',
+    name: 'SaddyTech',
+    url: '',
     authMethod,
     accessEnabled: isCloudflareAccessConfigured(cfAccessTeamDomain, cfAccessAud),
   }

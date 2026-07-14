@@ -62,7 +62,7 @@ Authorization: Bearer SinkCool
 Content-Type: application/json
 
 {
-  "url": "https://github.com/miantiao-me/Sink",
+  "url": "https://github.com/example/example",
   "slug": "sink",
   "comment": "GitHub repo",
   "expiration": 1767225599,
@@ -87,7 +87,7 @@ Content-Type: application/json
 {
   "link": {
     "id": "01jxyz...",
-    "url": "https://github.com/miantiao-me/Sink",
+    "url": "https://github.com/example/example",
     "slug": "sink",
     "comment": "GitHub repo",
     "createdAt": 1718119809,
@@ -128,7 +128,7 @@ Password-protected links render an HTML password form for browser visitors. API 
 ### Example: Generate OpenGraph Metadata with AI
 
 ```http
-GET /api/link/og-ai?url=https%3A%2F%2Fgithub.com%2Fmiantiao-me%2FSink&locale=en-US
+GET /api/link/og-ai?url=https%3A%2F%2Fgithub.com%2Fexample%2Fexample&locale=en-US
 Authorization: Bearer SinkCool
 ```
 
@@ -150,7 +150,7 @@ The response is `text/csv` with these columns:
 
 ```csv
 slug,url,viewer,views,referer
-sink,https://github.com/miantiao-me/Sink,123,456,12
+sink,https://github.com/example/example,123,456,12
 ```
 
 ## CORS

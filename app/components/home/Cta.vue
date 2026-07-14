@@ -23,6 +23,7 @@ const { github } = useAppConfig()
 
           <div class="mt-8 flex flex-wrap justify-center gap-4">
             <Button
+              v-if="github"
               as-child
               size="lg"
             >

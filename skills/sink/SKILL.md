@@ -226,7 +226,7 @@ Verify if the site token is valid.
 ```json
 {
   "name": "Sink",
-  "url": "https://sink.cool"
+  "url": ""
 }
 ```
 

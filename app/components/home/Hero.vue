@@ -28,6 +28,7 @@ const { title, description, github, twitter } = useAppConfig()
         >
           <!-- Twitter Follow Badge -->
           <a
+            v-if="twitter"
             :href="twitter"
             target="_blank"
             rel="noopener"
@@ -81,6 +82,7 @@ const { title, description, github, twitter } = useAppConfig()
               </NuxtLink>
             </Button>
             <Button
+              v-if="github"
               as-child
               size="lg"
               variant="ghost"

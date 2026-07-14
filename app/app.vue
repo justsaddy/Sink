@@ -3,6 +3,7 @@ import 'vue-sonner/style.css'
 
 const { title, description, image } = useAppConfig()
 const route = useRoute()
+const requestURL = useRequestURL()
 const localeHead = useLocaleHead()
 
 useSeoMeta({
@@ -30,7 +31,7 @@ useHead(() => ({
   link: [
     {
       rel: 'canonical',
-      href: computed(() => `https://sink.cool${route.path}`),
+      href: computed(() => `${requestURL.origin}${route.path}`),
     },
     {
       rel: 'icon',

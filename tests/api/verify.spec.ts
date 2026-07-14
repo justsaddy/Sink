@@ -22,8 +22,8 @@ describe('/api/verify', () => {
     expect(response.headers.get('Content-Type')).toContain('application/json')
 
     const data = await response.json() as VerifyResponse
-    expect(data.name).toBe('Sink')
-    expect(data.url).toBe('https://sink.cool')
+    expect(data.name).toBe('SaddyTech')
+    expect(data.url).toBe('')
   })
 
   it('returns 401 when accessing without auth', async () => {
